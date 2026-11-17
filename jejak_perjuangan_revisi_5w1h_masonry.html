@@ -1,0 +1,2061 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description"
+    content="Media pembelajaran interaktif sejarah perjuangan fisik mempertahankan kemerdekaan Indonesia 1945–1949.">
+  <title>Jejak Perjuangan | Fisik & Diplomasi 1945–1949</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap');
+
+    :root {
+      --red: #9f3029;
+      --red2: #c34b3c;
+      --ink: #29251f;
+      --muted: #71685d;
+      --paper: #f4eddf;
+      --card: #fffaf1;
+      --brown: #6f4c35;
+      --gold: #c59b55;
+      --line: #dfd1bb;
+      --green: #536c53;
+      --shadow: 0 14px 38px #46321c14
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 15px/1.75 'DM Sans', sans-serif;
+      background: var(--paper);
+      background-image: radial-gradient(#9b79501a .7px, transparent .7px);
+      background-size: 7px 7px
+    }
+
+    a {
+      color: inherit
+    }
+
+    button,
+    input {
+      font: inherit
+    }
+
+    .topbar {
+      height: 5px;
+      background: linear-gradient(90deg, var(--red), #d8ad69, #f7eee0)
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      background: #fffaf1ed;
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 12px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px
+    }
+
+    .logo {
+      font: 700 19px 'Playfair Display';
+      color: var(--red);
+      white-space: nowrap
+    }
+
+    .logo span {
+      color: var(--brown)
+    }
+
+    .navlinks {
+      display: flex;
+      gap: 18px;
+      align-items: center
+    }
+
+    .navlinks a {
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      color: #5d5145
+    }
+
+    .navlinks a:hover {
+      color: var(--red)
+    }
+
+    .menu {
+      display: none;
+      border: 1px solid var(--line);
+      background: var(--card);
+      padding: 7px 11px;
+      border-radius: 8px
+    }
+
+    .hero {
+      min-height: 570px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      background: linear-gradient(90deg, #251b16ed 0%, #302219c9 47%, #30221955 100%), url('https://upload.wikimedia.org/wikipedia/commons/2/26/Bandung_Lautan_Api.jpg') center/cover;
+      position: relative
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(0deg, #251b16a6, transparent 45%);
+      pointer-events: none
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 24px;
+      width: 100%
+    }
+
+    .eyebrow {
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #e8c783;
+      font-size: 11px;
+      font-weight: 700
+    }
+
+    .hero h1 {
+      font: 800 clamp(42px, 7vw, 76px)/1.08 'Playfair Display';
+      max-width: 790px;
+      margin: 18px 0
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #f1e8dc;
+      font-size: 17px
+    }
+
+    .btn {
+      border: 0;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      border-radius: 8px;
+      padding: 12px 19px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: .2s
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: #fff
+    }
+
+    .hero .btn-primary {
+      background: #e4bd72;
+      color: #2e241b
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.04)
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      margin-top: 28px;
+      color: #eadcc8;
+      font-size: 12px
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: auto;
+      padding: 0 22px
+    }
+
+    .intro-strip {
+      margin-top: -28px;
+      position: relative;
+      z-index: 2;
+      background: var(--card);
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 14px;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px
+    }
+
+    .intro-strip strong {
+      color: var(--red)
+    }
+
+    .progress-wrap {
+      min-width: 180px
+    }
+
+    .progress-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 700
+    }
+
+    .progress {
+      height: 7px;
+      border-radius: 10px;
+      background: #e7dccb;
+      overflow: hidden;
+      margin-top: 6px
+    }
+
+    .progress i {
+      display: block;
+      width: 0;
+      height: 100%;
+      background: var(--red);
+      transition: .4s
+    }
+
+    section {
+      padding: 78px 0 10px
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 28px
+    }
+
+    .kicker {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      font-weight: 700
+    }
+
+    .section-head h2 {
+      font: 700 clamp(29px, 4vw, 42px)/1.2 'Playfair Display';
+      margin: 7px 0 10px;
+      color: #382a20
+    }
+
+    .section-head p {
+      color: var(--muted);
+      margin: 0
+    }
+
+    .paper-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 23px;
+      box-shadow: var(--shadow)
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 20px
+    }
+
+    .intro-grid h3,
+    .paper-card h3 {
+      font: 700 21px 'Playfair Display';
+      margin: 0 0 9px;
+      color: var(--brown)
+    }
+
+    .bullet {
+      padding-left: 20px
+    }
+
+    .bullet li {
+      margin: 6px 0
+    }
+
+    .fact {
+      border-left: 4px solid var(--gold);
+      background: #f5ead6;
+      padding: 14px 17px;
+      border-radius: 0 9px 9px 0;
+      margin-top: 15px
+    }
+
+    .event-tools {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 18px
+    }
+
+    #w5Select {
+      padding-right: 40px;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235b4636' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 22px center;
+      background-size: 16px;
+    }
+
+    .search {
+      flex: 1;
+      min-width: 220px;
+      max-width: 420px;
+      padding: 11px 14px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 8px;
+      outline-color: var(--gold)
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 17px
+    }
+
+    .event-card {
+      overflow: hidden;
+      padding: 0;
+      transition: .25s
+    }
+
+    .event-card:hover {
+      transform: translateY(-3px)
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 205px;
+      object-fit: cover;
+      display: block;
+      filter: sepia(.18)
+    }
+
+    .event-body {
+      padding: 19px 21px
+    }
+
+    .event-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center
+    }
+
+    .date {
+      color: var(--red);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .4px
+    }
+
+    .place {
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    .event-body h3 {
+      font: 700 22px 'Playfair Display';
+      margin: 5px 0;
+      color: #3b2c20
+    }
+
+    .event-body p {
+      color: #655b50;
+      margin: 5px 0 12px
+    }
+
+    .details {
+      border-top: 1px dashed var(--line);
+      margin-top: 13px;
+      padding-top: 13px;
+      display: none
+    }
+
+    .details.open {
+      display: block;
+      animation: fade .3s
+    }
+
+    .details h4 {
+      font-size: 13px;
+      color: var(--red);
+      margin: 14px 0 3px
+    }
+
+    .details p,
+    .details li {
+      font-size: 13px;
+      color: #5f554a
+    }
+
+    .details ul {
+      padding-left: 19px;
+      margin: 5px 0
+    }
+
+    .smallbtn {
+      border: 1px solid #cdbb9f;
+      color: var(--brown);
+      background: transparent;
+      padding: 8px 12px;
+      border-radius: 7px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .smallbtn:hover {
+      background: #f1e5d2
+    }
+
+    .who-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px
+    }
+
+    .person {
+      padding: 18px
+    }
+
+    .person .initial {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #ead8bd;
+      color: var(--red);
+      display: grid;
+      place-items: center;
+      font: 700 19px 'Playfair Display'
+    }
+
+    .person h3 {
+      font: 700 17px 'Playfair Display';
+      margin: 10px 0 2px
+    }
+
+    .person p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 8px;
+      position: relative
+    }
+
+    .timepoint {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 10px;
+      padding: 13px 10px;
+      text-align: left;
+      cursor: pointer;
+      min-height: 112px
+    }
+
+    .timepoint b {
+      display: block;
+      color: var(--red);
+      font-size: 12px
+    }
+
+    .timepoint span {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 1.35;
+      display: block;
+      margin-top: 6px
+    }
+
+    .timepoint.active {
+      background: var(--red);
+      color: white;
+      border-color: var(--red)
+    }
+
+    .timepoint.active b {
+      color: #f4d99f
+    }
+
+    .time-detail {
+      margin-top: 14px;
+      min-height: 100px
+    }
+
+    .w5-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px
+    }
+
+    .w5 {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow: hidden
+    }
+
+    .w5 button {
+      width: 100%;
+      padding: 15px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px
+    }
+
+    .w5 .symbol {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      background: #efe0c8;
+      color: var(--red);
+      border-radius: 10px;
+      font-weight: 800
+    }
+
+    .w5 strong {
+      display: block;
+      color: var(--brown)
+    }
+
+    .w5 small {
+      color: var(--muted)
+    }
+
+    .w5 .answer {
+      display: none;
+      border-top: 1px dashed var(--line);
+      padding: 13px 16px;
+      color: #5d5348;
+      font-size: 13px
+    }
+
+    .w5.open .answer {
+      display: block;
+      animation: fade .25s
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px
+    }
+
+    .gallery figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      background: #ddd
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 190px;
+      object-fit: cover;
+      display: block;
+      transition: .4s;
+      filter: sepia(.15)
+    }
+
+    .gallery figure:hover img {
+      transform: scale(1.05)
+    }
+
+    .gallery figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 26px 12px 10px;
+      color: white;
+      font-weight: 700;
+      font-size: 12px;
+      background: linear-gradient(transparent, #21170fdd)
+    }
+
+    .quizbox {
+      background: #34271e;
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: var(--shadow)
+    }
+
+    .quizbox h3 {
+      font: 700 25px 'Playfair Display';
+      margin: 0
+    }
+
+    .quiz-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: #e6c987;
+      font-size: 12px
+    }
+
+    .qtext {
+      font-size: 18px;
+      font-weight: 700;
+      margin: 22px 0 14px
+    }
+
+    .answers {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .answer-btn {
+      background: #49392d;
+      border: 1px solid #715b47;
+      color: #fff;
+      padding: 12px;
+      text-align: left;
+      border-radius: 8px;
+      cursor: pointer
+    }
+
+    .answer-btn:hover:not(:disabled) {
+      background: #604a37
+    }
+
+    .answer-btn:disabled {
+      cursor: default;
+      opacity: .8
+    }
+
+    .answer-btn.correct {
+      background: #365b43;
+      border-color: #7db38a
+    }
+
+    .answer-btn.wrong {
+      background: #7a3730;
+      border-color: #d58b7e
+    }
+
+    .feedback {
+      margin-top: 14px;
+      padding: 12px;
+      border-radius: 8px;
+      background: #49392d;
+      color: #f4e8d6;
+      font-size: 13px;
+      display: none
+    }
+
+    .quiz-actions {
+      display: flex;
+      gap: 10px;
+      margin-top: 18px;
+      flex-wrap: wrap
+    }
+
+    .quiz-actions .btn {
+      background: #e4bd72;
+      color: #2c2119
+    }
+
+    .quiz-actions .btn:disabled {
+      opacity: .4;
+      cursor: not-allowed
+    }
+
+    .score {
+      font: 700 38px 'Playfair Display';
+      color: #e4bd72
+    }
+
+    .source-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .source-list a {
+      color: var(--red);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none
+    }
+
+    .source-list a:hover {
+      text-decoration: underline
+    }
+
+    footer {
+      margin-top: 80px;
+      background: #2d2119;
+      color: #e8dccb;
+      padding: 42px 22px;
+      text-align: center
+    }
+
+    footer .quote {
+      font: 700 clamp(20px, 3vw, 29px)/1.4 'Playfair Display';
+      max-width: 850px;
+      margin: 0 auto 14px;
+      color: #f0d39b
+    }
+
+    footer p {
+      font-size: 12px;
+      color: #cbbba7
+    }
+
+    #toTop {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 20;
+      border: 0;
+      background: var(--red);
+      color: #fff;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      display: none
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: .6s
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    @keyframes fade {
+      from {
+        opacity: 0;
+        transform: translateY(5px)
+      }
+
+      to {
+        opacity: 1;
+        transform: none
+      }
+    }
+
+    @media(max-width:900px) {
+      .navlinks {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        background: var(--card);
+        padding: 18px 22px;
+        border-bottom: 1px solid var(--line);
+        flex-wrap: wrap
+      }
+
+      .navlinks.show {
+        display: flex
+      }
+
+      .menu {
+        display: block
+      }
+
+      .who-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .timeline {
+        grid-template-columns: repeat(4, 1fr)
+      }
+
+      .gallery {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media(max-width:620px) {
+      .hero {
+        min-height: 520px
+      }
+
+      .hero-inner {
+        padding: 70px 22px
+      }
+
+      .hero p {
+        font-size: 15px
+      }
+
+      .intro-strip {
+        display: block
+      }
+
+      .progress-wrap {
+        margin-top: 15px
+      }
+
+      .intro-grid,
+      .event-grid,
+      .source-list {
+        grid-template-columns: 1fr
+      }
+
+      .w5-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .timeline {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .who-grid {
+        grid-template-columns: repeat(2, 1fr)
+      }
+
+      .answers {
+        grid-template-columns: 1fr
+      }
+
+      .gallery img {
+        height: 155px
+      }
+
+      section {
+        padding-top: 60px
+      }
+    }
+  </style>
+  <style id="card-layout-fix">
+    .event-grid {
+      align-items: start
+    }
+
+    .event-card {
+      align-self: start;
+      height: max-content;
+      min-height: 0
+    }
+
+    .event-card .details {
+      width: 100%;
+      box-sizing: border-box
+    }
+
+    .event-card .event-body {
+      height: auto;
+      min-height: 0
+    }
+
+    .event-card img {
+      background: #e8ddc9
+    }
+
+    .diplomacy-grid {
+      align-items: start
+    }
+
+    .diplomacy-card {
+      align-self: start;
+      height: max-content;
+      min-height: 0
+    }
+  </style>
+
+  <style id="w5-masonry-fix">
+    /* 5W+1H: tiap kartu berdiri sendiri dan memakai ruang kosong seperti susunan masonry */
+    .w5-grid {
+      grid-auto-rows: 8px;
+      grid-auto-flow: row dense;
+      align-items: start
+    }
+
+    .w5 {
+      align-self: start;
+      height: max-content;
+      min-height: 0;
+      grid-row-end: span 1
+    }
+
+    .w5 .answer {
+      line-height: 1.7
+    }
+
+    @media(max-width:620px) {
+      .w5-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 8px
+      }
+    }
+  </style>
+
+  <style id="diplomacy-first-theme">
+    .diplomacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+      align-items: start
+    }
+
+    .diplomacy-card {
+      border-top: 3px solid var(--red);
+      align-self: start;
+      height: max-content;
+      min-height: 0
+    }
+
+    .dip-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+      flex-wrap: wrap
+    }
+
+    .dip-date {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: var(--red)
+    }
+
+    .dip-tag {
+      font-size: 10px;
+      font-weight: 700;
+      background: #f0e4d1;
+      color: var(--brown);
+      padding: 5px 9px;
+      border-radius: 20px
+    }
+
+    .diplomacy-card h3 {
+      font: 700 23px 'Playfair Display', serif;
+      color: var(--ink);
+      margin: 0 0 8px
+    }
+
+    .diplomacy-card>p {
+      color: var(--muted);
+      line-height: 1.75;
+      margin: 0 0 15px
+    }
+
+    .dip-toggle {
+      align-self: flex-start;
+      margin-top: auto
+    }
+
+    .dip-details {
+      display: none;
+      border-top: 1px dashed var(--line);
+      margin-top: 15px;
+      padding-top: 12px
+    }
+
+    .dip-details.open {
+      display: block;
+      animation: fade .3s
+    }
+
+    .dip-details h4 {
+      font-size: 13px;
+      color: var(--red);
+      margin: 14px 0 4px
+    }
+
+    .dip-details p,
+    .dip-details li {
+      font-size: 13px;
+      color: #5f554a;
+      line-height: 1.8
+    }
+
+    .dip-details ul {
+      padding-left: 19px;
+      margin: 5px 0
+    }
+
+    .diplomacy-timeline {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px
+    }
+
+    .diplomacy-timeline>div {
+      position: relative;
+      background: #34271e;
+      color: #fff;
+      border-radius: 9px;
+      padding: 16px 13px;
+      min-height: 120px;
+      overflow: hidden
+    }
+
+    .diplomacy-timeline>div:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: var(--gold)
+    }
+
+    .diplomacy-timeline b {
+      display: block;
+      color: #e6c987;
+      font-size: 12px;
+      letter-spacing: .7px
+    }
+
+    .diplomacy-timeline span {
+      display: block;
+      font-weight: 800;
+      margin: 7px 0 5px
+    }
+
+    .diplomacy-timeline small {
+      display: block;
+      color: #eee0cc;
+      font-size: 11px;
+      line-height: 1.5
+    }
+
+    @media(max-width:850px) {
+      .diplomacy-timeline {
+        grid-template-columns: repeat(3, 1fr)
+      }
+    }
+
+    @media(max-width:620px) {
+      .diplomacy-grid {
+        grid-template-columns: 1fr
+      }
+
+      .diplomacy-timeline {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+  </style>
+
+
+  <style id="reference-screenshot-fixes">
+    .hero {
+      background-image: linear-gradient(90deg, rgba(38, 25, 17, .91) 0%, rgba(46, 31, 22, .68) 48%, rgba(46, 31, 22, .20) 100%), url('https://upload.wikimedia.org/wikipedia/commons/2/26/Bandung_Lautan_Api.jpg') !important;
+      background-position: center 48%;
+      background-size: cover
+    }
+
+    .event-grid,
+    .diplomacy-grid {
+      align-items: start
+    }
+
+    .event-card,
+    .diplomacy-card {
+      align-self: start;
+      height: max-content;
+      min-height: 0
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 205px;
+      display: block;
+      object-fit: cover;
+      background: #e8ddc9
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 180px;
+      display: block;
+      object-fit: cover;
+      background: #e8ddc9
+    }
+  </style>
+
+
+  <style id="masonry-card-layout-fix">
+    /* Masonry-style grid: cards keep their own height and later cards fill open spaces. */
+    .event-grid,
+    .diplomacy-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-auto-rows: 8px;
+      grid-auto-flow: row dense;
+      align-items: start;
+      column-gap: 17px;
+      row-gap: 17px
+    }
+
+    .event-card,
+    .diplomacy-card {
+      align-self: start;
+      min-height: 0;
+      height: auto;
+      margin: 0
+    }
+
+    .event-card .details,
+    .diplomacy-card .dip-details {
+      box-sizing: border-box;
+      width: 100%
+    }
+
+    @media(max-width:620px) {
+
+      .event-grid,
+      .diplomacy-grid {
+        grid-template-columns: minmax(0, 1fr);
+        grid-auto-rows: 8px
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="topbar"></div>
+  <header>
+    <nav class="nav"><a class="logo" href="#home" style="text-decoration:none">JEJAK <span>PERJUANGAN</span></a><button
+        class="menu" id="menuBtn" aria-label="Buka navigasi">☰</button>
+      <div class="navlinks" id="navlinks"><a href="#pengantar">Pengenalan</a><a href="#peristiwa">Peristiwa</a><a
+          href="#diplomasi">Diplomasi</a><a href="#tokoh">Tokoh</a><a href="#timeline">Timeline</a><a
+          href="#analisis">5W + 1H</a><a href="#galeri">Galeri</a><a href="#kuis">Kuis</a></div>
+    </nav>
+  </header>
+  <div class="hero" id="home">
+    <div class="hero-inner">
+      <div class="eyebrow">Media Pembelajaran Sejarah · 1945—1949</div>
+      <h1>Mempertahankan Kemerdekaan Indonesia</h1>
+      <p>Menelusuri keberanian rakyat dan para pejuang di berbagai daerah dalam mempertahankan kemerdekaan yang telah
+        diproklamasikan pada 17 Agustus 1945.</p><a class="btn btn-primary" href="#pengantar">Mulai Belajar
+        <span>↓</span></a>
+      <div class="hero-meta"><span>✦ 7 peristiwa bersejarah</span><span>✦ Perjuangan diplomasi</span><span>✦ Analisis 5W
+          + 1H</span></div>
+    </div>
+  </div>
+  <main class="wrap">
+    <div class="intro-strip">
+      <div><strong>Belajar dari sejarah.</strong> Kemerdekaan dipertahankan melalui keberanian, pengorbanan, dan
+        persatuan rakyat di seluruh Indonesia.</div>
+      <div class="progress-wrap">
+        <div class="progress-label"><span>PROGRESS BELAJAR</span><span id="progressText">0%</span></div>
+        <div class="progress"><i id="progressBar"></i></div>
+      </div>
+    </div>
+    <section id="pengantar" class="reveal">
+      <div class="section-head">
+        <div class="kicker">01 · Pengenalan</div>
+        <h2>Mengapa Kemerdekaan Harus Dipertahankan?</h2>
+        <p>Proklamasi menjadi awal berdirinya negara Indonesia, tetapi perjuangan belum selesai. Ancaman terhadap
+          kemerdekaan membuat rakyat harus mempertahankan kedaulatan dengan kekuatan sendiri.</p>
+      </div>
+      <div class="intro-grid">
+        <article class="paper-card">
+          <h3>Pengertian perjuangan fisik</h3>
+          <p>Perjuangan fisik adalah usaha mempertahankan kemerdekaan melalui perlawanan langsung, seperti pertempuran
+            bersenjata, perang gerilya, penghadangan, dan penguasaan wilayah. Perjuangan ini dilakukan oleh tentara,
+            laskar, pemuda, serta masyarakat.</p>
+          <h3 style="margin-top:20px">Latar belakang dan kondisi Indonesia</h3>
+          <p>Sesudah Proklamasi 17 Agustus 1945, Indonesia masih menghadapi situasi yang belum stabil. Pemerintah dan
+            tentara nasional sedang dibentuk, sementara di berbagai daerah rakyat mengambil inisiatif menjaga keamanan
+            dan mempertahankan kemerdekaan.</p>
+          <p>Pasukan Sekutu (AFNEI) datang untuk menerima penyerahan Jepang, membebaskan tawanan perang, dan melucuti
+            tentara Jepang. Namun, kedatangan mereka juga disertai NICA (Netherlands Indies Civil Administration), yang
+            berupaya memulihkan pemerintahan kolonial Belanda. Kehadiran NICA menimbulkan kecurigaan dan perlawanan
+            rakyat.</p>
+        </article>
+        <aside class="paper-card">
+          <h3>Mengapa rakyat melawan?</h3>
+          <ul class="bullet">
+            <li>Menolak kembalinya penjajahan Belanda.</li>
+            <li>Mempertahankan kemerdekaan dan wilayah Republik Indonesia.</li>
+            <li>Melindungi rakyat dari tindakan kekerasan dan ancaman pasukan asing.</li>
+            <li>Menjaga hasil Proklamasi 17 Agustus 1945.</li>
+          </ul>
+          <div class="fact"><b>Tujuan utama:</b> menjaga kemerdekaan agar Indonesia tetap menjadi bangsa yang merdeka
+            dan berdaulat.</div>
+          <h3 style="margin-top:18px">Siapa yang berjuang?</h3>
+          <p>TKR/TNI, laskar perjuangan, pemuda, pemimpin daerah, ulama, perempuan, dan masyarakat sipil. Perjuangan
+            berlangsung di kota maupun desa, dengan taktik terbuka dan gerilya.</p>
+        </aside>
+      </div>
+    </section>
+    <section id="peristiwa" class="reveal">
+      <div class="section-head">
+        <div class="kicker">02 · Materi utama</div>
+        <h2>Tujuh Peristiwa Perjuangan Fisik</h2>
+        <p>Pilih tombol “Baca selengkapnya” untuk membuka latar belakang, tokoh, kronologi, sebab-akibat, dan nilai
+          perjuangan setiap peristiwa.</p>
+      </div>
+      <div class="event-tools"><input class="search" id="eventSearch"
+          placeholder="⌕  Cari peristiwa, tokoh, atau lokasi..." aria-label="Cari materi"><span class="place">7
+          peristiwa · 1945–1949</span></div>
+      <div class="event-grid" id="eventGrid">
+        <article class="paper-card event-card"
+          data-search="surabaya 10 november mallaby bung tomo gubernur suryo sungkono"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2b/IWM-SE-5742-tank-Surabaya-194511.jpg"
+            alt="Dokumentasi pertempuran Surabaya" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">10 NOVEMBER 1945</span><span class="place">Surabaya, Jawa
+                Timur</span></div>
+            <h3>Pertempuran 10 November</h3>
+            <p>Pertempuran besar antara rakyat Surabaya dan pasukan Inggris setelah ketegangan memuncak akibat tewasnya
+              Mallaby dan ultimatum Sekutu.</p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang</h4>
+              <p>Pasukan Sekutu mendarat di Surabaya pada akhir Oktober 1945. Ketegangan meningkat karena bentrokan dan
+                upaya pelucutan senjata pejuang Indonesia. Brigadir Jenderal A.W.S. Mallaby tewas pada 30 Oktober 1945
+                di sekitar Jembatan Merah. Rangkaian kejadian yang menyebabkan kematiannya masih diperdebatkan dalam
+                sejumlah sumber.</p>
+              <h4>Tokoh penting</h4>
+              <ul>
+                <li><b>Bung Tomo:</b> melalui siaran radio membangkitkan semangat perlawanan rakyat.</li>
+                <li><b>Gubernur Suryo:</b> menyampaikan sikap pemerintah daerah dan menyerukan perlawanan setelah
+                  ultimatum.</li>
+                <li><b>Mayjen Sungkono:</b> memimpin pertahanan rakyat dan kekuatan bersenjata di Surabaya.</li>
+                <li><b>Brigjen Mallaby:</b> komandan Brigade 49 India-Inggris yang tewas pada 30 Oktober; penggantinya,
+                  Mayjen E.C.R. Mansergh, mengeluarkan ultimatum.</li>
+              </ul>
+              <h4>Kronologi</h4>
+              <ol>
+                <li>25 Oktober: pasukan Sekutu mendarat di Surabaya.</li>
+                <li>30 Oktober: Mallaby tewas di tengah ketegangan dan kontak senjata.</li>
+                <li>9 November: Mansergh mengeluarkan ultimatum agar rakyat menyerahkan senjata dan datang ke tempat
+                  yang ditentukan.</li>
+                <li>10 November sekitar pukul 06.00: serangan besar Sekutu dari darat, laut, dan udara dimulai. Bung
+                  Tomo mengobarkan semangat melalui radio; Gubernur Suryo menyerukan perlawanan.</li>
+                <li>Pertempuran berlangsung sengit selama beberapa minggu. Pejuang dan penduduk kemudian mundur/
+                  mengungsi dari pusat kota, tetapi perlawanan berlanjut.</li>
+              </ol>
+              <h4>Penyebab dan akibat</h4>
+              <p>Penyebabnya ialah ketegangan pasca-kedatangan Sekutu dan NICA, bentrokan bersenjata, tewasnya Mallaby,
+                serta ultimatum yang ditolak. Pertempuran menimbulkan korban besar dan kerusakan kota, tetapi
+                memperlihatkan tekad rakyat mempertahankan kemerdekaan. Tanggal 10 November diperingati sebagai Hari
+                Pahlawan untuk mengenang pengorbanan tersebut.</p>
+              <h4>Nilai perjuangan</h4>
+              <p>Keberanian, solidaritas, kepemimpinan, dan kesediaan berkorban demi kemerdekaan.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card" data-search="ambarawa palagan sudirman isdiman supit urang"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Bung_Tomo.jpg"
+            alt="Ilustrasi pasukan dalam pertempuran era revolusi" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">20 NOVEMBER–15 DESEMBER 1945</span><span class="place">Ambarawa,
+                Jawa Tengah</span></div>
+            <h3>Pertempuran Ambarawa</h3>
+            <p>Perlawanan TKR dan rakyat terhadap pasukan Inggris yang diboncengi kepentingan NICA di wilayah
+              Magelang–Ambarawa.</p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang</h4>
+              <p>Sekutu mendarat di Semarang pada Oktober 1945 dan bergerak ke Magelang serta Ambarawa dengan alasan
+                mengurus tawanan perang. Ketegangan muncul ketika NICA mempersenjatai kembali bekas tawanan Belanda dan
+                terjadi insiden dengan pasukan Indonesia.</p>
+              <h4>Tokoh penting</h4>
+              <ul>
+                <li><b>Kolonel Soedirman:</b> mengambil alih komando dan menyusun serangan terpadu.</li>
+                <li><b>Letkol Isdiman:</b> komandan sektor yang gugur dalam pertempuran.</li>
+                <li><b>Pasukan TKR dan laskar:</b> bertempur dari berbagai sektor bersama rakyat.</li>
+              </ul>
+              <h4>Kronologi dan strategi</h4>
+              <ol>
+                <li>20 Oktober 1945: ketegangan dan pertempuran berkembang di sekitar Magelang setelah kedatangan
+                  Sekutu.</li>
+                <li>Pasukan Indonesia menghadapi gerak maju Sekutu menuju Ambarawa.</li>
+                <li>Setelah Isdiman gugur, Kolonel Soedirman memimpin langsung operasi.</li>
+                <li>12 Desember 1945 pukul 04.30, serangan serentak dilancarkan dari berbagai sektor dengan strategi
+                  <i>Supit Urang</i>: mengepung musuh dari dua sisi sehingga jalur komunikasi dan logistiknya terputus.
+                </li>
+                <li>15 Desember 1945, pasukan Inggris mundur dari Ambarawa menuju Semarang.</li>
+              </ol>
+              <h4>Hasil, dampak, dan nilai</h4>
+              <p>Pasukan Indonesia berhasil mendesak Sekutu keluar dari Ambarawa. Kemenangan ini meningkatkan
+                kepercayaan diri TKR dan mengangkat nama Soedirman sebagai pemimpin militer. Nilainya adalah disiplin,
+                koordinasi, kecerdikan strategi, dan kerja sama antarkesatuan.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card" data-search="bandung lautan api mohammad toha dayeuhkolot nasution"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/26/Bandung_Lautan_Api.jpg"
+            alt="Bandung Lautan Api, dokumentasi arsip ANRI" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">23–24 MARET 1946</span><span class="place">Bandung, Jawa
+                Barat</span></div>
+            <h3>Bandung Lautan Api</h3>
+            <p>Pengosongan dan pembumihangusan bagian selatan Kota Bandung agar fasilitas penting tidak digunakan
+              Sekutu.</p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang dan ultimatum</h4>
+              <p>Setelah Sekutu tiba di Bandung pada Oktober 1945, ketegangan meningkat karena tuntutan pelucutan
+                senjata dan pembatasan wilayah bagi pejuang. Pada Maret 1946, Sekutu mengeluarkan ultimatum agar pasukan
+                Republik dan penduduk meninggalkan Bandung bagian selatan hingga radius tertentu.</p>
+              <h4>Tokoh dan peran</h4>
+              <ul>
+                <li><b>Kolonel A.H. Nasution:</b> komandan Divisi III TRI yang memerintahkan evakuasi Bandung selatan.
+                </li>
+                <li><b>Mohammad Toha dan Moh. Ramdan:</b> anggota milisi yang gugur dalam operasi penghancuran gudang
+                  amunisi di Dayeuhkolot.</li>
+                <li><b>Rakyat dan pejuang Bandung:</b> mengungsi sambil membakar bangunan strategis agar tidak
+                  dimanfaatkan lawan.</li>
+              </ul>
+              <h4>Kronologi</h4>
+              <ol>
+                <li>Sekutu meminta pasukan Republik meninggalkan wilayah Bandung selatan.</li>
+                <li>Pada 23 Maret 1946, Nasution memerintahkan pengosongan kota bagian selatan.</li>
+                <li>Rakyat mengungsi ke luar kota; bangunan dan fasilitas strategis dibakar oleh para pejuang.</li>
+                <li>Di Dayeuhkolot, Mohammad Toha dan Moh. Ramdan terlibat dalam peledakan gudang amunisi yang dikuasai
+                  Belanda/Sekutu.</li>
+              </ol>
+              <h4>Akibat dan makna</h4>
+              <p>Bagian selatan Bandung terbakar dan penduduk harus meninggalkan rumahnya. Tindakan itu merupakan
+                strategi bumi hangus agar fasilitas kota tidak menjadi pangkalan militer lawan. Peristiwa ini
+                mengajarkan pengorbanan besar, meskipun berdampak berat bagi warga sipil.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card"
+          data-search="medan area sumatera utara achmad tahir lencana merah putih ted kelly"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/92/Medan_Area_Memorial.jpg"
+            alt="Foto pasukan pada masa revolusi di Sumatra" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">13 OKTOBER 1945–1947</span><span class="place">Medan, Sumatera
+                Utara</span></div>
+            <h3>Pertempuran Medan Area</h3>
+            <p>Perlawanan rakyat Sumatera Utara terhadap Sekutu dan NICA yang berusaha menguasai kembali wilayah
+              Indonesia.</p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang dan pemicu</h4>
+              <p>Pasukan Sekutu di bawah Brigadir Jenderal T.E.D. Kelly mendarat di Medan pada 9 Oktober 1945 untuk
+                mengurus tawanan perang dan melucuti tentara Jepang. NICA ikut datang sehingga rakyat khawatir Belanda
+                akan kembali berkuasa. Pada 13 Oktober 1945 terjadi insiden ketika lencana Merah Putih milik seorang
+                pemuda dirampas dan diinjak oleh tentara NICA. Insiden ini memicu bentrokan.</p>
+              <h4>Tokoh dan pihak terlibat</h4>
+              <ul>
+                <li><b>Achmad Tahir:</b> tokoh pemuda yang memelopori Barisan Pemuda Indonesia.</li>
+                <li><b>TKR, Barisan Pemuda Indonesia, laskar dan rakyat:</b> melakukan perlawanan di Medan dan
+                  sekitarnya.</li>
+                <li><b>T.E.D. Kelly:</b> pimpinan pasukan Sekutu yang mendarat di Medan.</li>
+              </ul>
+              <h4>Kronologi</h4>
+              <ol>
+                <li>9 Oktober 1945: pasukan Sekutu mendarat di Medan bersama unsur NICA.</li>
+                <li>13 Oktober: insiden lencana Merah Putih memicu bentrokan.</li>
+                <li>Para pemuda membentuk dan memperkuat barisan perjuangan; pertempuran meluas ke berbagai wilayah
+                  sekitar Medan.</li>
+                <li>Sekutu menetapkan batas wilayah yang dikenal sebagai “Medan Area”; bentrokan dan perang gerilya
+                  berlanjut hingga 1946–1947.</li>
+              </ol>
+              <h4>Akibat dan nilai perjuangan</h4>
+              <p>Konflik menimbulkan korban, kerusakan, dan pengungsian. Perlawanan tidak mudah dipadamkan dan
+                menunjukkan kuatnya semangat kebangsaan rakyat Sumatera Utara. Lencana Merah Putih menjadi simbol harga
+                diri dan kedaulatan Republik.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card" data-search="puputan margarana bali ngurah rai ciung wanara"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Gusti_ngurah_rai.jpg"
+            alt="Potret I Gusti Ngurah Rai" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">20 NOVEMBER 1946</span><span class="place">Desa Marga, Tabanan,
+                Bali</span></div>
+            <h3>Puputan Margarana</h3>
+            <p>Pertempuran habis-habisan pasukan Ciung Wanara pimpinan I Gusti Ngurah Rai melawan pasukan NICA/Belanda.
+            </p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang</h4>
+              <p>Pasukan NICA mendarat di Bali pada Maret 1946 dan berusaha menguasai pulau tersebut. I Gusti Ngurah Rai
+                mengorganisasi pasukan Republik dan melakukan perlawanan gerilya. Setelah operasi perebutan senjata oleh
+                pasukan Republik, NICA melakukan pengepungan di sekitar Desa Marga.</p>
+              <h4>Tokoh dan pasukan</h4>
+              <ul>
+                <li><b>Letkol I Gusti Ngurah Rai:</b> pemimpin pasukan Republik di Bali.</li>
+                <li><b>Pasukan Ciung Wanara:</b> pasukan yang dipimpin Ngurah Rai.</li>
+                <li><b>Pasukan NICA/KNIL:</b> kekuatan Belanda yang mengepung wilayah Marga.</li>
+              </ul>
+              <h4>Kronologi</h4>
+              <ol>
+                <li>Pasukan Republik bergerilya dan berusaha menguasai persenjataan untuk memperkuat perlawanan.</li>
+                <li>Pada 19 November 1946, NICA bergerak mengepung desa-desa di sekitar Marga.</li>
+                <li>20 November pagi, pasukan NICA memasuki Marga dan terjadi kontak senjata dengan Ciung Wanara di
+                  sekitar Uma Kaang.</li>
+                <li>Belanda mengerahkan pasukan lebih besar serta dukungan senjata berat dan udara. Pasukan Ciung Wanara
+                  terkepung dan bertempur sampai akhir.</li>
+              </ol>
+              <h4>Makna “puputan”, akibat, dan nilai</h4>
+              <p>Dalam konteks Bali, <i>puputan</i> berarti berjuang sampai titik akhir atau habis-habisan. I Gusti
+                Ngurah Rai dan pasukannya gugur. Peristiwa ini menjadi simbol keberanian, kesetiaan pada Republik, dan
+                pengorbanan rakyat Bali. Monumen Taman Pujaan Bangsa Margarana dibangun untuk mengenang para pejuang.
+              </p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card"
+          data-search="serangan umum 1 maret 1949 yogyakarta sultan hamengkubuwono soeharto enam jam"><img
+            src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Suharto_General_Offensive.jpg"
+            alt="Foto pasukan Indonesia pada masa revolusi" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">1 MARET 1949</span><span class="place">Yogyakarta</span></div>
+            <h3>Serangan Umum 1 Maret 1949</h3>
+            <p>Serangan terpadu TNI dan rakyat untuk menunjukkan bahwa Republik dan kekuatan militernya masih ada.</p>
+            <button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang</h4>
+              <p>Setelah Agresi Militer Belanda II pada Desember 1948, Yogyakarta diduduki Belanda dan sejumlah pemimpin
+                Republik ditawan. Belanda menyebarkan propaganda bahwa Republik dan TNI telah hancur. TNI tetap
+                bergerilya di luar kota dan merencanakan serangan untuk membuktikan keberadaan Republik.</p>
+              <h4>Tokoh dan peran</h4>
+              <ul>
+                <li><b>Sri Sultan Hamengkubuwono IX:</b> mendukung gagasan serangan dan membantu koordinasi dari
+                  Yogyakarta.</li>
+                <li><b>Letkol Soeharto:</b> komandan Wehrkreise III yang memimpin pelaksanaan serangan di Yogyakarta.
+                </li>
+                <li><b>Jenderal Soedirman:</b> Panglima Besar TNI yang memimpin perjuangan gerilya secara umum.</li>
+                <li><b>TNI dan laskar rakyat:</b> menyerang dari berbagai sektor.</li>
+              </ul>
+              <h4>Strategi dan kronologi</h4>
+              <ol>
+                <li>Gagasan serangan disiapkan melalui koordinasi pimpinan militer dan Sri Sultan.</li>
+                <li>1 Maret 1949 sekitar pukul 06.00, saat jam malam berakhir, pasukan Indonesia menyerang Yogyakarta
+                  dari berbagai arah.</li>
+                <li>Pasukan Republik berhasil menguasai sejumlah bagian kota selama sekitar enam jam.</li>
+                <li>Sekitar pukul 12.00 pasukan mulai mundur sesuai rencana agar tidak terjebak ketika bala bantuan
+                  Belanda datang.</li>
+              </ol>
+              <h4>Tujuan dan dampak</h4>
+              <p>Serangan ini bukan untuk menduduki kota secara permanen, melainkan menunjukkan eksistensi TNI dan
+                Republik kepada masyarakat Indonesia serta dunia. Berita keberhasilan serangan disebarkan melalui
+                jaringan radio, mematahkan propaganda bahwa Republik telah lenyap. Nilainya ialah strategi, koordinasi,
+                keberanian, dan keteguhan.</p>
+            </div>
+          </div>
+        </article>
+        <article class="paper-card event-card"
+          data-search="westerling sulawesi selatan raymond pembantaian korban 40.000"><img
+            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Raymond_Westerling.jpg/960px-Raymond_Westerling.jpg"
+            alt="Potret Raymond Westerling" loading="lazy" decoding="async">
+          <div class="event-body">
+            <div class="event-top"><span class="date">DESEMBER 1946–FEBRUARI 1947</span><span class="place">Sulawesi
+                Selatan</span></div>
+            <h3>Peristiwa Westerling</h3>
+            <p>Operasi kekerasan pasukan khusus Belanda pimpinan Raymond Westerling terhadap penduduk yang dituduh
+              mendukung Republik.</p><button class="smallbtn toggle-detail">Baca selengkapnya +</button>
+            <div class="details">
+              <h4>Latar belakang</h4>
+              <p>Di Sulawesi Selatan, dukungan terhadap Republik dan perlawanan terhadap kembalinya kekuasaan Belanda
+                terus berkembang. Belanda mengirim pasukan khusus Depot Speciale Troepen (DST) yang dipimpin Kapten
+                Raymond Westerling untuk melakukan operasi “pembersihan”.</p>
+              <h4>Tokoh dan pihak terlibat</h4>
+              <ul>
+                <li><b>Raymond Westerling:</b> komandan DST yang memimpin operasi kekerasan.</li>
+                <li><b>Rakyat dan pejuang Sulawesi Selatan:</b> menjadi sasaran operasi, sementara sebagian melakukan
+                  perlawanan dan bergerilya.</li>
+                <li><b>Pasukan DST/NICA:</b> melakukan penangkapan dan eksekusi di sejumlah wilayah.</li>
+              </ul>
+              <h4>Kronologi</h4>
+              <ol>
+                <li>Operasi dimulai pada Desember 1946 di sejumlah wilayah Sulawesi Selatan.</li>
+                <li>Penduduk dikumpulkan, orang-orang yang dituduh sebagai pejuang atau pendukung Republik diinterogasi,
+                  dan banyak yang dieksekusi tanpa proses peradilan yang layak.</li>
+                <li>Operasi kekerasan berlanjut hingga awal 1947; Westerling kemudian ditarik dari Sulawesi Selatan pada
+                  Februari 1947.</li>
+              </ol>
+              <h4>Korban, dampak, dan catatan sejarah</h4>
+              <p>Peristiwa ini menimbulkan korban jiwa dalam jumlah besar, trauma, dan penderitaan masyarakat. Angka
+                korban berbeda-beda menurut sumber: angka 40.000 dikenal luas dalam ingatan publik, tetapi penelitian
+                sejarah mencatat adanya perbedaan perkiraan dan belum ada angka pasti yang disepakati. Karena itu, angka
+                korban tidak boleh dinyatakan sebagai kepastian tunggal.</p>
+              <p>Peristiwa Westerling merupakan tragedi kemanusiaan dan bukti beratnya perjuangan rakyat mempertahankan
+                kemerdekaan. Nilai yang dapat dipetik ialah penghormatan terhadap hak hidup manusia dan penolakan
+                terhadap kekerasan terhadap warga sipil.</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section id="diplomasi" class="reveal">
+      <div class="section-head">
+        <div class="kicker">03 · Jalur diplomasi</div>
+        <h2>Perjuangan Diplomasi Mempertahankan Kemerdekaan</h2>
+        <p>Selain perlawanan bersenjata, Indonesia menempuh jalur diplomasi untuk menghentikan konflik, mempertahankan
+          keberadaan Republik, dan memperoleh pengakuan kedaulatan. Buka setiap kartu untuk membaca latar belakang, isi
+          pokok, tokoh, serta analisis 5W + 1H.</p>
+      </div>
+      <div class="fact" style="margin:0 0 20px"><b>Catatan penting:</b> Diplomasi bukan berarti perjuangan berhenti.
+        Perundingan berlangsung di tengah tekanan militer, agresi, dan perjuangan rakyat di berbagai daerah.</div>
+      <div class="diplomacy-grid">
+        <article class="paper-card diplomacy-card">
+          <div class="dip-top"><span class="dip-date">14–25 APRIL 1946</span><span class="dip-tag">Perundingan
+              awal</span></div>
+          <h3>Perundingan Hooge-Veluwe</h3>
+          <p>Pertemuan Indonesia dan Belanda di Belanda yang membahas penyelesaian konflik, tetapi tidak menghasilkan
+            kesepakatan.</p>
+          <button class="smallbtn dip-toggle" aria-expanded="false">Buka materi +</button>
+          <div class="dip-details">
+            <h4>Latar belakang</h4>
+            <p>Setelah Proklamasi, Belanda berusaha kembali menguasai Indonesia. Pemerintah Republik berupaya mencari
+              penyelesaian melalui perundingan, sementara situasi keamanan di berbagai daerah masih tegang.</p>
+            <h4>Tokoh dan pihak yang terlibat</h4>
+            <ul>
+              <li>Delegasi Republik Indonesia dipimpin oleh Soewandi, A.K. Pringgodigdo, dan Mohammad Roem.</li>
+              <li>Delegasi Belanda dipimpin oleh Van Mook.</li>
+            </ul>
+            <h4>Pokok pembahasan dan hasil</h4>
+            <p>Pembicaraan membahas pengakuan Belanda terhadap kekuasaan Republik dan bentuk hubungan politik
+              selanjutnya. Perbedaan tuntutan mengenai kedudukan Republik membuat perundingan tidak mencapai
+              kesepakatan.</p>
+            <h4>Analisis 5W + 1H</h4>
+            <p><b>What:</b> Perundingan awal Indonesia–Belanda. <b>When:</b> 14–25 April 1946. <b>Where:</b> Hooge
+              Veluwe, Belanda. <b>Who:</b> Delegasi Republik dan Belanda, termasuk Soewandi dan Van Mook. <b>Why:</b>
+              Mencari penyelesaian konflik setelah kemerdekaan. <b>How:</b> Kedua pihak membahas pengakuan dan hubungan
+              politik, tetapi berbeda pandangan sehingga tidak tercapai kesepakatan.</p>
+            <h4>Dampak</h4>
+            <p>Kegagalan perundingan menunjukkan besarnya perbedaan posisi Indonesia dan Belanda. Upaya diplomasi
+              kemudian berlanjut melalui perundingan di Indonesia.</p>
+          </div>
+        </article>
+
+        <article class="paper-card diplomacy-card">
+          <div class="dip-top"><span class="dip-date">15 NOVEMBER 1946</span><span class="dip-tag">Kesepakatan
+              awal</span></div>
+          <h3>Perjanjian Linggarjati</h3>
+          <p>Kesepakatan yang memuat pengakuan de facto Belanda atas wilayah Republik Indonesia yang meliputi Jawa,
+            Madura, dan Sumatra.</p>
+          <button class="smallbtn dip-toggle" aria-expanded="false">Buka materi +</button>
+          <div class="dip-details">
+            <h4>Latar belakang</h4>
+            <p>Konflik bersenjata antara Indonesia dan Belanda terus berlangsung. Kedua pihak kemudian menempuh
+              perundingan untuk mencari jalan keluar, dengan Inggris berperan sebagai penengah.</p>
+            <h4>Tokoh dan pihak yang terlibat</h4>
+            <ul>
+              <li>Delegasi Indonesia dipimpin Sutan Sjahrir.</li>
+              <li>Delegasi Belanda dipimpin Willem Schermerhorn.</li>
+              <li>Lord Killearn dari Inggris membantu proses perundingan.</li>
+            </ul>
+            <h4>Pokok isi</h4>
+            <ul>
+              <li>Belanda mengakui secara de facto Republik Indonesia atas Jawa, Madura, dan Sumatra.</li>
+              <li>Indonesia dan Belanda sepakat membentuk Republik Indonesia Serikat (RIS).</li>
+              <li>RIS dan Belanda direncanakan membentuk Uni Indonesia–Belanda.</li>
+            </ul>
+            <h4>Waktu penting</h4>
+            <p>Naskah diparaf pada 15 November 1946 di Linggarjati dan ditandatangani secara resmi pada 25 Maret 1947 di
+              Jakarta.</p>
+            <h4>Analisis 5W + 1H</h4>
+            <p><b>What:</b> Kesepakatan politik Indonesia–Belanda. <b>When:</b> 15 November 1946; pengesahan/tanda
+              tangan resmi 25 Maret 1947. <b>Where:</b> Linggarjati, Kuningan, Jawa Barat; penandatanganan resmi di
+              Jakarta. <b>Who:</b> Sutan Sjahrir, Willem Schermerhorn, dan Lord Killearn sebagai penengah. <b>Why:</b>
+              Mengupayakan penghentian konflik dan pengakuan terhadap Republik. <b>How:</b> Delegasi berunding dan
+              menyepakati pengakuan de facto serta rencana pembentukan RIS dan Uni.</p>
+            <h4>Dampak</h4>
+            <p>Perjanjian ini memberi pengakuan de facto terhadap wilayah Republik, tetapi menimbulkan perbedaan tafsir
+              dan ketegangan dalam pelaksanaannya. Belanda kemudian melancarkan Agresi Militer I pada Juli 1947.</p>
+          </div>
+        </article>
+
+        <article class="paper-card diplomacy-card">
+          <div class="dip-top"><span class="dip-date">17 JANUARI 1948</span><span class="dip-tag">Pasca-Agresi I</span>
+          </div>
+          <h3>Perjanjian Renville</h3>
+          <p>Persetujuan yang dicapai di atas kapal USS Renville setelah Agresi Militer Belanda I dan mediasi Komisi
+            Tiga Negara.</p>
+          <button class="smallbtn dip-toggle" aria-expanded="false">Buka materi +</button>
+          <div class="dip-details">
+            <h4>Latar belakang</h4>
+            <p>Belanda melancarkan Agresi Militer I pada Juli 1947. Dewan Keamanan PBB menyerukan penghentian
+              tembak-menembak dan membentuk Komisi Tiga Negara untuk membantu penyelesaian konflik.</p>
+            <h4>Tokoh dan pihak yang terlibat</h4>
+            <ul>
+              <li>Delegasi Indonesia dipimpin Amir Sjarifuddin.</li>
+              <li>Delegasi Belanda dipimpin R. Abdulkadir Widjojoatmodjo.</li>
+              <li>Komisi Tiga Negara terdiri atas Australia, Belgia, dan Amerika Serikat.</li>
+            </ul>
+            <h4>Pokok isi dan hasil</h4>
+            <ul>
+              <li>Garis demarkasi yang dikenal sebagai Garis Van Mook menjadi batas wilayah yang dikuasai masing-masing
+                pihak.</li>
+              <li>Pasukan Republik harus ditarik dari wilayah di belakang garis tersebut, termasuk sejumlah daerah
+                kantong.</li>
+              <li>Persetujuan gencatan senjata menjadi bagian penting kesepakatan.</li>
+            </ul>
+            <h4>Analisis 5W + 1H</h4>
+            <p><b>What:</b> Persetujuan gencatan senjata dan penetapan garis demarkasi. <b>When:</b> 17 Januari 1948.
+              <b>Where:</b> Kapal USS Renville di Teluk Jakarta. <b>Who:</b> Delegasi Indonesia, Belanda, dan Komisi
+              Tiga Negara. <b>Why:</b> Merespons Agresi Militer I dan tekanan internasional agar konflik dihentikan.
+              <b>How:</b> Perundingan dimediasi Komisi Tiga Negara dan menghasilkan persetujuan yang menetapkan garis
+              demarkasi.</p>
+            <h4>Dampak</h4>
+            <p>Wilayah Republik semakin terbatas dan pasukan TNI harus hijrah dari sejumlah daerah kantong, termasuk
+              Divisi Siliwangi dari Jawa Barat ke Jawa Tengah. Persetujuan ini menimbulkan ketidakpuasan di Indonesia.
+            </p>
+          </div>
+        </article>
+
+        <article class="paper-card diplomacy-card">
+          <div class="dip-top"><span class="dip-date">7 MEI 1949</span><span class="dip-tag">Pemulihan Republik</span>
+          </div>
+          <h3>Persetujuan Roem–Royen</h3>
+          <p>Persetujuan yang membuka jalan bagi pemulihan pemerintahan Republik di Yogyakarta dan kelanjutan
+            perundingan menuju penyelesaian akhir.</p>
+          <button class="smallbtn dip-toggle" aria-expanded="false">Buka materi +</button>
+          <div class="dip-details">
+            <h4>Latar belakang</h4>
+            <p>Belanda melancarkan Agresi Militer II pada 19 Desember 1948 dan menduduki Yogyakarta. Para pemimpin
+              Republik ditangkap, tetapi pemerintahan darurat dan perjuangan gerilya tetap berlangsung. Tekanan
+              internasional mendorong dimulainya perundingan kembali.</p>
+            <h4>Tokoh dan pihak yang terlibat</h4>
+            <ul>
+              <li>Mohammad Roem memimpin delegasi Republik Indonesia.</li>
+              <li>Herman van Roijen (sering ditulis Royen) mewakili Belanda.</li>
+              <li>UNCI (United Nations Commission for Indonesia) membantu proses perundingan.</li>
+            </ul>
+            <h4>Pokok persetujuan</h4>
+            <ul>
+              <li>Indonesia menyatakan kesediaan menghentikan perang gerilya dan membantu pemulihan keamanan.</li>
+              <li>Belanda menyetujui penghentian operasi militer dan pembebasan tahanan politik.</li>
+              <li>Belanda menyetujui kembalinya pemerintah Republik Indonesia ke Yogyakarta.</li>
+              <li>Kedua pihak sepakat melanjutkan pembahasan dalam Konferensi Meja Bundar.</li>
+            </ul>
+            <h4>Analisis 5W + 1H</h4>
+            <p><b>What:</b> Persetujuan untuk memulihkan pemerintahan Republik dan menghentikan konflik. <b>When:</b> 7
+              Mei 1949. <b>Where:</b> Jakarta. <b>Who:</b> Mohammad Roem, Herman van Roijen, dan UNCI. <b>Why:</b>
+              Menanggapi Agresi Militer II dan tekanan PBB. <b>How:</b> Kedua delegasi menyepakati pernyataan
+              masing-masing yang menjadi dasar pemulihan pemerintahan Republik dan konferensi lanjutan.</p>
+            <h4>Dampak</h4>
+            <p>Pemerintah Republik kembali ke Yogyakarta pada 6 Juli 1949. Persetujuan ini menjadi tahap penting sebelum
+              Konferensi Meja Bundar.</p>
+          </div>
+        </article>
+
+        <article class="paper-card diplomacy-card">
+          <div class="dip-top"><span class="dip-date">23 AGUSTUS–2 NOVEMBER 1949</span><span class="dip-tag">Konferensi
+              akhir</span></div>
+          <h3>Konferensi Meja Bundar (KMB)</h3>
+          <p>Konferensi di Den Haag yang menghasilkan kesepakatan penyerahan kedaulatan kepada Republik Indonesia
+            Serikat.</p>
+          <button class="smallbtn dip-toggle" aria-expanded="false">Buka materi +</button>
+          <div class="dip-details">
+            <h4>Latar belakang</h4>
+            <p>Setelah Persetujuan Roem–Royen, pemerintah Republik kembali ke Yogyakarta. Indonesia dan Belanda
+              melanjutkan pembahasan mengenai penyerahan kedaulatan melalui konferensi internasional di Den Haag.</p>
+            <h4>Tokoh dan pihak yang terlibat</h4>
+            <ul>
+              <li>Delegasi Republik Indonesia dipimpin Mohammad Hatta.</li>
+              <li>Delegasi BFO (Bijeenkomst voor Federaal Overleg) dipimpin Sultan Hamid II.</li>
+              <li>Delegasi Belanda dipimpin J.H. van Maarseveen.</li>
+              <li>UNCI berperan dalam membantu jalannya konferensi.</li>
+            </ul>
+            <h4>Pokok hasil</h4>
+            <ul>
+              <li>Belanda akan menyerahkan kedaulatan kepada Republik Indonesia Serikat (RIS).</li>
+              <li>Penyerahan kedaulatan dilaksanakan paling lambat 30 Desember 1949; pelaksanaannya berlangsung pada 27
+                Desember 1949.</li>
+              <li>Dibentuk Uni Indonesia–Belanda.</li>
+              <li>Masalah Irian Barat belum diselesaikan dan akan dibicarakan kemudian.</li>
+            </ul>
+            <h4>Analisis 5W + 1H</h4>
+            <p><b>What:</b> Konferensi untuk menyelesaikan konflik dan mengatur penyerahan kedaulatan. <b>When:</b> 23
+              Agustus–2 November 1949. <b>Where:</b> Den Haag, Belanda. <b>Who:</b> Delegasi RI, BFO, Belanda, dan UNCI.
+              <b>Why:</b> Menindaklanjuti Persetujuan Roem–Royen dan mencapai pengakuan kedaulatan. <b>How:</b> Para
+              delegasi membahas bentuk negara, penyerahan kedaulatan, hubungan Indonesia–Belanda, dan sejumlah persoalan
+              yang belum selesai.</p>
+            <h4>Dampak</h4>
+            <p>Belanda menyerahkan kedaulatan kepada RIS pada 27 Desember 1949. Peristiwa ini menandai berakhirnya
+              periode utama revolusi mempertahankan kemerdekaan, meskipun persoalan Irian Barat belum selesai.</p>
+          </div>
+        </article>
+      </div>
+      <div class="section-head" style="margin:36px 0 18px">
+        <div class="kicker">Garis waktu diplomasi</div>
+        <h3 style="font-size:23px;margin:5px 0">Dari perundingan awal hingga pengakuan kedaulatan</h3>
+      </div>
+      <div class="diplomacy-timeline">
+        <div><b>1946</b><span>Hooge-Veluwe</span><small>Perundingan tidak mencapai kesepakatan</small></div>
+        <div><b>1946–1947</b><span>Linggarjati</span><small>Pengakuan de facto atas Jawa, Madura, Sumatra</small></div>
+        <div><b>1948</b><span>Renville</span><small>Garis demarkasi dan penarikan pasukan</small></div>
+        <div><b>1949</b><span>Roem–Royen</span><small>Pemerintah RI kembali ke Yogyakarta</small></div>
+        <div><b>1949</b><span>KMB</span><small>Kesepakatan penyerahan kedaulatan</small></div>
+      </div>
+      <div class="fact" style="margin-top:18px"><b>Kesimpulan:</b> Diplomasi membantu memperjuangkan pengakuan dan
+        kedaulatan Indonesia, tetapi prosesnya tidak selalu mudah. Kesepakatan-kesepakatan tersebut lahir di tengah
+        tekanan militer, perbedaan kepentingan, serta dukungan dan desakan masyarakat internasional.</div>
+    </section>
+
+
+    <section id="tokoh" class="reveal">
+      <div class="section-head">
+        <div class="kicker">04 · Tokoh sejarah</div>
+        <h2>Orang-Orang di Balik Perjuangan</h2>
+        <p>Tokoh dari berbagai daerah memimpin, menggerakkan, dan mendukung perlawanan rakyat.</p>
+      </div>
+      <div class="who-grid">
+        <div class="paper-card person">
+          <div class="initial">BT</div>
+          <h3>Bung Tomo</h3>
+          <p>Pengobar semangat rakyat Surabaya melalui pidato dan siaran radio.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">GS</div>
+          <h3>Gubernur Suryo</h3>
+          <p>Gubernur Jawa Timur yang menyerukan perlawanan pada 10 November.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">MS</div>
+          <h3>Mayjen Sungkono</h3>
+          <p>Memimpin pertahanan dan kekuatan bersenjata di Surabaya.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">JS</div>
+          <h3>Jenderal Soedirman</h3>
+          <p>Memimpin strategi TKR dalam Palagan Ambarawa.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">MT</div>
+          <h3>Mohammad Toha</h3>
+          <p>Pejuang yang gugur dalam operasi peledakan gudang amunisi di Dayeuhkolot.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">AT</div>
+          <h3>Achmad Tahir</h3>
+          <p>Tokoh pemuda dan pelopor Barisan Pemuda Indonesia di Medan.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">NR</div>
+          <h3>I Gusti Ngurah Rai</h3>
+          <p>Pemimpin pasukan Ciung Wanara dalam Puputan Margarana.</p>
+        </div>
+        <div class="paper-card person">
+          <div class="initial">SH</div>
+          <h3>Sri Sultan Hamengkubuwono IX</h3>
+          <p>Mendukung persiapan Serangan Umum 1 Maret 1949.</p>
+        </div>
+      </div>
+    </section>
+    <section id="timeline" class="reveal">
+      <div class="section-head">
+        <div class="kicker">05 · Urutan waktu</div>
+        <h2>Timeline Perjuangan 1945–1949</h2>
+        <p>Klik salah satu titik untuk melihat ringkasan peristiwa, lokasi, dan tokoh penting.</p>
+      </div>
+      <div class="timeline" id="timelineButtons"></div>
+      <div class="paper-card time-detail" id="timeDetail" aria-live="polite"></div>
+    </section>
+    <section id="analisis" class="reveal">
+      <div class="section-head">
+        <div class="kicker">06 · Analisis sejarah</div>
+        <h2>Mengenal Perjuangan melalui 5W + 1H</h2>
+        <p>Pilih peristiwa, lalu buka enam kartu untuk memahami apa, kapan, di mana, siapa, mengapa, dan bagaimana
+          peristiwa berlangsung.</p>
+      </div>
+      <div class="event-tools"><select class="search" id="w5Select" aria-label="Pilih peristiwa"></select></div>
+      <div class="w5-grid" id="w5Grid"></div>
+    </section>
+    <section id="galeri" class="reveal">
+      <div class="section-head">
+        <div class="kicker">07 · Galeri arsip</div>
+        <h2>Potret Perjuangan</h2>
+        <p>Foto dokumentasi dan potret tokoh dari masa revolusi. Beberapa gambar merupakan ilustrasi arsip dari sumber
+          sejarah terkait; keterangan sumber dicantumkan pada daftar referensi.</p>
+      </div>
+      <div class="gallery">
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/IWM-SE-5742-tank-Surabaya-194511.jpg"
+            alt="Pertempuran Surabaya" loading="lazy" decoding="async">
+          <figcaption>Pertempuran Surabaya</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Bung_Tomo.jpg" alt="Bung Tomo"
+            loading="lazy" decoding="async">
+          <figcaption>Bung Tomo</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/c/ce/Palagan_Ambarawa_-_panoramio.jpg"
+            alt="Pasukan masa Palagan Ambarawa" loading="lazy" decoding="async">
+          <figcaption>Palagan Ambarawa</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Bandung_Lautan_Api.jpg"
+            alt="Bandung Lautan Api" loading="lazy" decoding="async">
+          <figcaption>Bandung Lautan Api</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/9/92/Medan_Area_Memorial.jpg"
+            alt="Pasukan masa Pertempuran Medan Area" loading="lazy" decoding="async">
+          <figcaption>Pertempuran Medan Area</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Gusti_ngurah_rai.jpg"
+            alt="I Gusti Ngurah Rai" loading="lazy" decoding="async">
+          <figcaption>I Gusti Ngurah Rai</figcaption>
+        </figure>
+        <figure><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Suharto_General_Offensive.jpg"
+            alt="Pasukan masa revolusi Yogyakarta" loading="lazy" decoding="async">
+          <figcaption>Serangan Umum 1 Maret</figcaption>
+        </figure>
+        <figure><img
+            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Raymond_Westerling.jpg/960px-Raymond_Westerling.jpg"
+            alt="Raymond Westerling" loading="lazy" decoding="async">
+          <figcaption>Raymond Westerling</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section id="kuis" class="reveal">
+      <div class="section-head">
+        <div class="kicker">08 · Uji pemahaman</div>
+        <h2>Kuis Sejarah Interaktif</h2>
+        <p>Jawab 15 pertanyaan pilihan ganda. Setelah memilih jawaban, kamu akan mendapatkan pembahasan.</p>
+      </div>
+      <div class="quizbox">
+        <div class="quiz-top"><span id="qCount">PERTANYAAN 1 DARI 15</span><span id="qScore">SKOR: 0</span></div>
+        <div class="progress" style="background:#5b4939;margin-top:12px"><i id="quizProgress"
+            style="background:#e4bd72"></i></div>
+        <div id="quizContent">
+          <div class="qtext" id="question"></div>
+          <div class="answers" id="answers"></div>
+          <div class="feedback" id="feedback"></div>
+          <div class="quiz-actions"><button class="btn" id="nextQ" disabled>Soal berikutnya →</button></div>
+        </div>
+        <div id="quizResult" hidden>
+          <div class="score" id="finalScore"></div>
+          <h3 id="resultTitle"></h3>
+          <p id="resultText"></p><button class="btn" id="restart">↻ Ulangi kuis</button>
+        </div>
+      </div>
+    </section>
+    <section id="kesimpulan" class="reveal">
+      <div class="section-head">
+        <div class="kicker">09 · Refleksi</div>
+        <h2>Menjaga Ingatan, Menghargai Perjuangan</h2>
+      </div>
+      <div class="paper-card">
+        <p>Perjuangan fisik menjadi bagian penting dalam mempertahankan kemerdekaan Indonesia. Di berbagai daerah,
+          rakyat dan para pejuang menunjukkan nasionalisme dan patriotisme melalui keberanian menghadapi ancaman,
+          pengorbanan harta benda bahkan nyawa, serta persatuan lintas kelompok.</p>
+        <p>Peristiwa-peristiwa tersebut mengajarkan nilai persatuan, keberanian, tanggung jawab, kerja sama, dan pantang
+          menyerah. Menghargai jasa para pahlawan dapat dilakukan dengan mempelajari sejarah secara kritis, menjaga
+          persatuan, dan mengisi kemerdekaan melalui tindakan positif.</p>
+        <div class="fact"><b>Ingatlah:</b> sejarah juga mengajak kita menghormati korban sipil dan memahami bahwa perang
+          membawa penderitaan besar bagi masyarakat.</div>
+      </div>
+    </section>
+    <section id="referensi" class="reveal">
+      <div class="section-head">
+        <div class="kicker">10 · Bacaan lanjutan</div>
+        <h2>Sumber dan Referensi Sejarah</h2>
+        <p>Materi dirangkum dari arsip, ensiklopedia, museum, dan kajian sejarah. Tautan berikut dapat dibuka untuk
+          membaca sumber lebih lanjut.</p>
+      </div>
+      <div class="paper-card source-list">
+        <a href="https://commons.wikimedia.org/wiki/File:IWM-SE-5742-tank-Surabaya-194511.jpg" target="_blank"
+          rel="noopener">Wikimedia Commons / Imperial War Museums — Foto Surabaya 1945 ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Bung_Tomo.jpg" target="_blank" rel="noopener">Wikimedia Commons
+          — Potret Bung Tomo, foto Alex Mendur ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Bandung_Lautan_Api.jpg" target="_blank" rel="noopener">ANRI
+          melalui Wikimedia Commons — Bandung Lautan Api ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Palagan_Ambarawa_-_panoramio.jpg" target="_blank"
+          rel="noopener">Wikimedia Commons — Monumen Palagan Ambarawa ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Medan_Area_Memorial.jpg" target="_blank"
+          rel="noopener">Wikimedia Commons — Monumen peringatan Peristiwa Jalan Bali, Medan ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Gusti_ngurah_rai.jpg" target="_blank" rel="noopener">Wikimedia
+          Commons — Potret I Gusti Ngurah Rai ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Suharto_General_Offensive.jpg" target="_blank"
+          rel="noopener">Wikimedia Commons — Foto Serangan Umum 1 Maret 1949 ↗</a>
+        <a href="https://commons.wikimedia.org/wiki/File:Raymond_Westerling.jpg" target="_blank"
+          rel="noopener">Wikimedia Commons — Potret Raymond Westerling ↗</a>
+
+        <a href="https://www.anri.go.id/publikasi/berita/peringati-hari-pahlawan-pameran-binar-angkat-tema-peristiwa-pertempuran-10-november-1945"
+          target="_blank" rel="noopener">ANRI — Arsip Pertempuran 10 November 1945 ↗</a>
+        <a href="https://budaya.jogjaprov.go.id/berita/detail/1457-mengenal-tokoh-pertempuran-ambarawa-palagan-ambarawa"
+          target="_blank" rel="noopener">Dinas Kebudayaan DIY — Palagan Ambarawa ↗</a>
+        <a href="https://museumtniad.com/2023/10/28/soedirman-dalam-palagan-ambarawa/" target="_blank"
+          rel="noopener">Museum TNI AD — Soedirman dalam Palagan Ambarawa ↗</a>
+        <a href="https://esi.kemenbud.go.id/wiki/Bandung_Lautan_Api" target="_blank" rel="noopener">Ensiklopedia Sejarah
+          Indonesia — Bandung Lautan Api ↗</a>
+        <a href="https://journal2.um.ac.id/index.php/JDS/article/view/22135" target="_blank" rel="noopener">Jurnal UM —
+          Peran Mohammad Toha ↗</a>
+        <a href="https://esi.kemenbud.go.id/wiki/Pertempuran_Medan_Area" target="_blank" rel="noopener">Ensiklopedia
+          Sejarah Indonesia — Medan Area ↗</a>
+        <a href="https://esi.kemenbud.go.id/wiki/Puputan_Margarana" target="_blank" rel="noopener">Ensiklopedia Sejarah
+          Indonesia — Puputan Margarana ↗</a>
+        <a href="https://museumkepresidenan.id/artikel/sri-sultan-hamengku-buwono-ix-sang-penjaga-kedaulatan/"
+          target="_blank" rel="noopener">Museum Kepresidenan — Serangan Umum 1 Maret ↗</a>
+        <a href="https://repositori.kemendikdasmen.go.id/14112/1/Biografi%20pahlawan%20nasional%20sultan%20hamengkubuwana%20ix.pdf"
+          target="_blank" rel="noopener">Repositori Kemendikdasmen — Biografi Sultan HB IX ↗</a>
+        <a href="https://journal.uin-alauddin.ac.id/index.php/rihlah/article/download/9383/6846" target="_blank"
+          rel="noopener">Jurnal Rihlah UIN Alauddin — Kajian korban Westerling ↗</a>
+        <a href="https://repositori.kemendikdasmen.go.id/26671/1/PANEL%20SEJARAH%20LISAN.pdf" target="_blank"
+          rel="noopener">Repositori Kemendikdasmen — Panel Sejarah Lisan (catatan angka korban) ↗</a>
+        <a href="https://www.anri.go.id/download/daftar-arsip-foto-ipphos-19451950-1586220441" target="_blank"
+          rel="noopener">ANRI — Inventaris Arsip Foto IPPHOS 1945–1950 ↗</a>
+      </div>
+      <p style="font-size:12px;color:var(--muted);margin-top:12px">Catatan ketelitian: beberapa detail sejarah memiliki
+        perbedaan penafsiran antarsumber. Bagian Peristiwa Westerling secara khusus menyebutkan bahwa jumlah korban
+        masih diperdebatkan; foto daring ditautkan dari sumber masing-masing dan hak penggunaan mengikuti ketentuan
+        pemilik/arsip.</p>
+    </section>
+  </main>
+  <footer>
+    <div class="quote">“Kemerdekaan bukanlah hadiah, melainkan hasil perjuangan, pengorbanan, dan persatuan seluruh
+      rakyat Indonesia.”</div>
+    <p>JEJAK PERJUANGAN · Media Pembelajaran Perjuangan Fisik & Diplomasi Indonesia 1945–1949</p>
+  </footer>
+  <button id="toTop" aria-label="Kembali ke atas">↑</button>
+  <script>
+
+    document.querySelectorAll('img').forEach(img => {
+      img.addEventListener('error', () => {
+        if (img.dataset.fallbackApplied) return;
+        img.dataset.fallbackApplied = '1';
+        const label = (img.alt || 'Foto arsip sejarah').replace(/[<>&"]/g, '');
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520"><rect width="900" height="520" fill="#e8ddc9"/><rect x="24" y="24" width="852" height="472" rx="10" fill="none" stroke="#b99d78" stroke-width="3"/><path d="M0 390L180 260l130 95 170-180 420 250v95H0z" fill="#c4ad8e"/><text x="450" y="455" text-anchor="middle" font-family="Georgia,serif" font-size="25" fill="#594431">${label}</text></svg>`;
+        img.src = 'data:image/svg+xml;charset=UTF-8,' + encodeURIComponent(svg);
+        img.style.objectFit = 'cover';
+      }, {once: true});
+    });
+
+    const w5Data = [
+      {title: "Pertempuran 10 November 1945", date: "10 November 1945", place: "Surabaya, Jawa Timur", who: "Rakyat dan arek-arek Surabaya, Bung Tomo, Gubernur Suryo, Mayjen Sungkono; melawan pasukan Inggris/Sekutu. Mallaby terlibat dalam rangkaian ketegangan sebelumnya.", what: "Pertempuran besar rakyat Surabaya melawan pasukan Sekutu untuk mempertahankan kemerdekaan.", why: "Ketegangan setelah kedatangan Sekutu dan NICA, bentrokan, tewasnya Brigjen Mallaby pada 30 Oktober, dan ultimatum Sekutu pada 9 November.", how: "Sekutu menyerang dari darat, laut, dan udara mulai pagi 10 November. Gubernur Suryo menyerukan perlawanan, Bung Tomo membakar semangat melalui radio, dan Mayjen Sungkono mengoordinasikan pertahanan. Pertempuran sengit berlangsung berminggu-minggu."},
+      {title: "Pertempuran Ambarawa", date: "20 November–15 Desember 1945", place: "Ambarawa, Jawa Tengah", who: "TKR dan laskar Indonesia dipimpin Kolonel Soedirman; Letkol Isdiman gugur. Lawannya pasukan Inggris/Sekutu yang diboncengi NICA.", what: "Pertempuran antara TKR dan pasukan Sekutu di wilayah Ambarawa.", why: "Kedatangan Sekutu dan tindakan NICA mempersenjatai kembali bekas tawanan Belanda menimbulkan ketegangan dengan pasukan Indonesia.", how: "Soedirman menyusun serangan dari berbagai sektor. Pada 12 Desember, strategi Supit Urang mengepung musuh dari dua sisi dan memutus jalur komunikasi serta logistik. Pada 15 Desember, pasukan Inggris mundur ke Semarang."},
+      {title: "Bandung Lautan Api", date: "23–24 Maret 1946", place: "Bandung, Jawa Barat; terutama Bandung Selatan dan Dayeuhkolot", who: "Rakyat dan pejuang Bandung, Kolonel A.H. Nasution, Mohammad Toha, dan Moh. Ramdan.", what: "Pengosongan dan pembakaran fasilitas strategis Bandung Selatan agar tidak dimanfaatkan pasukan Sekutu.", why: "Ultimatum Sekutu agar pasukan Republik dan penduduk meninggalkan Bandung bagian selatan.", how: "Nasution memerintahkan evakuasi. Rakyat mengungsi, sementara bangunan strategis dibakar. Di Dayeuhkolot, Mohammad Toha dan Moh. Ramdan gugur dalam operasi penghancuran gudang amunisi."},
+      {title: "Pertempuran Medan Area", date: "13 Oktober 1945 dan berlanjut hingga 1946–1947", place: "Medan dan wilayah Sumatera Utara", who: "Pemuda, TKR, Barisan Pemuda Indonesia yang dipelopori Achmad Tahir; melawan Sekutu dan NICA di bawah komando lokal Sekutu T.E.D. Kelly.", what: "Perlawanan rakyat Sumatera Utara terhadap pasukan Sekutu dan NICA.", why: "Kedatangan Sekutu bersama NICA serta insiden 13 Oktober 1945 ketika lencana Merah Putih seorang pemuda dirampas dan diinjak.", how: "Bentrokan pecah setelah insiden lencana. Pemuda membentuk barisan perjuangan, pertempuran meluas di sekitar Medan, dan perlawanan berlanjut melalui pertempuran terbuka serta gerilya."},
+      {title: "Puputan Margarana", date: "20 November 1946", place: "Desa Marga, Tabanan, Bali", who: "I Gusti Ngurah Rai dan pasukan Ciung Wanara melawan pasukan NICA/KNIL.", what: "Pertempuran habis-habisan antara pasukan Republik dan Belanda di Desa Marga.", why: "NICA berusaha menguasai Bali; pasukan Republik melakukan perlawanan gerilya dan operasi merebut persenjataan.", how: "NICA mengepung kawasan Marga. Pasukan Ciung Wanara bertempur di sekitar Uma Kaang, tetapi kalah jumlah dan persenjataan. Ngurah Rai dan pasukannya gugur."},
+      {title: "Serangan Umum 1 Maret 1949", date: "1 Maret 1949, sekitar pukul 06.00–12.00", place: "Yogyakarta", who: "TNI dan laskar rakyat; Sri Sultan Hamengkubuwono IX mendukung persiapan, Letkol Soeharto memimpin pelaksanaan di wilayah Yogyakarta.", what: "Serangan terpadu TNI terhadap posisi Belanda di Yogyakarta selama sekitar enam jam.", why: "Belanda menduduki Yogyakarta dan menyebarkan propaganda bahwa Republik serta TNI sudah tidak ada.", how: "Pasukan menyerang dari berbagai arah pada pukul 06.00 dan menguasai sebagian kota selama sekitar enam jam. Pasukan mundur sesuai rencana sebelum bala bantuan Belanda datang; berita serangan disebarkan melalui radio."},
+      {title: "Peristiwa Westerling", date: "Desember 1946–Februari 1947", place: "Sulawesi Selatan", who: "Raymond Westerling dan pasukan khusus DST/NICA; penduduk dan pejuang yang dituduh mendukung Republik menjadi sasaran.", what: "Operasi kekerasan dan pembunuhan massal oleh pasukan khusus Belanda di Sulawesi Selatan.", why: "Belanda berusaha menumpas perlawanan dan dukungan terhadap Republik di Sulawesi Selatan.", how: "Penduduk dikumpulkan, orang yang dicurigai dituduh sebagai pejuang atau pendukung Republik, kemudian banyak yang dieksekusi tanpa proses peradilan. Operasi berlangsung pada Desember 1946 hingga awal 1947. Angka korban berbeda-beda menurut sumber."},
+      {title: "Perundingan Hooge-Veluwe", date: "14–25 April 1946", place: "Hooge Veluwe, Belanda", who: "Delegasi Republik Indonesia, termasuk Soewandi, A.K. Pringgodigdo, dan Mohammad Roem; delegasi Belanda dipimpin Van Mook.", what: "Perundingan awal Indonesia–Belanda yang tidak menghasilkan kesepakatan.", why: "Kedua pihak berusaha mencari penyelesaian konflik setelah Proklamasi, tetapi memiliki pandangan berbeda tentang kedudukan Republik.", how: "Delegasi membahas pengakuan dan hubungan politik. Perbedaan tuntutan membuat pembicaraan berakhir tanpa kesepakatan."},
+      {title: "Perjanjian Linggarjati", date: "15 November 1946; ditandatangani resmi 25 Maret 1947", place: "Linggarjati, Kuningan, Jawa Barat; penandatanganan resmi di Jakarta", who: "Delegasi Indonesia dipimpin Sutan Sjahrir, delegasi Belanda dipimpin Willem Schermerhorn, dengan Lord Killearn sebagai penengah.", what: "Kesepakatan politik yang memuat pengakuan de facto Belanda atas Republik Indonesia di Jawa, Madura, dan Sumatra.", why: "Konflik bersenjata terus berlangsung sehingga kedua pihak berupaya mencari jalan penyelesaian.", how: "Kedua delegasi berunding dan menyepakati pengakuan de facto serta rencana pembentukan Republik Indonesia Serikat dan Uni Indonesia–Belanda."},
+      {title: "Perjanjian Renville", date: "17 Januari 1948", place: "Kapal USS Renville di Teluk Jakarta", who: "Delegasi Indonesia dipimpin Amir Sjarifuddin, delegasi Belanda dipimpin R. Abdulkadir Widjojoatmodjo, serta Komisi Tiga Negara.", what: "Persetujuan gencatan senjata dan penetapan garis demarkasi yang dikenal sebagai Garis Van Mook.", why: "Perundingan dilakukan setelah Agresi Militer Belanda I dan desakan Dewan Keamanan PBB agar tembak-menembak dihentikan.", how: "Kedua pihak berunding dengan bantuan Komisi Tiga Negara, lalu menyepakati garis demarkasi dan penarikan pasukan Republik dari sejumlah wilayah."},
+      {title: "Persetujuan Roem–Royen", date: "7 Mei 1949", place: "Jakarta", who: "Mohammad Roem mewakili Republik Indonesia dan Herman van Roijen mewakili Belanda, dengan bantuan UNCI.", what: "Persetujuan yang membuka jalan bagi pemulihan pemerintahan Republik di Yogyakarta.", why: "Agresi Militer Belanda II dan tekanan internasional mendorong kedua pihak kembali berunding.", how: "Kedua delegasi menyepakati pernyataan masing-masing, termasuk penghentian operasi militer, pembebasan tahanan politik, dan kembalinya pemerintah RI ke Yogyakarta."},
+      {title: "Konferensi Meja Bundar (KMB)", date: "23 Agustus–2 November 1949", place: "Den Haag, Belanda", who: "Delegasi Republik Indonesia dipimpin Mohammad Hatta, BFO dipimpin Sultan Hamid II, delegasi Belanda dipimpin J.H. van Maarseveen, serta UNCI.", what: "Konferensi yang menghasilkan kesepakatan penyerahan kedaulatan kepada Republik Indonesia Serikat.", why: "Kedua pihak melanjutkan penyelesaian konflik setelah Persetujuan Roem–Royen.", how: "Delegasi membahas bentuk negara, penyerahan kedaulatan, hubungan Indonesia–Belanda, dan persoalan Irian Barat yang belum terselesaikan."}
+    ];
+    const timelineData = [
+      ["9 Okt 1945", "Sekutu mendarat di Medan", "Medan, Sumatera Utara", "Pasukan Sekutu di bawah T.E.D. Kelly mendarat bersama unsur NICA.", "T.E.D. Kelly; Achmad Tahir"],
+      ["10 Nov 1945", "Pertempuran Surabaya", "Surabaya, Jawa Timur", "Serangan besar Sekutu dihadapi perlawanan rakyat dan pejuang Surabaya.", "Bung Tomo; Gubernur Suryo; Mayjen Sungkono"],
+      ["20 Nov–15 Des 1945", "Palagan Ambarawa", "Ambarawa, Jawa Tengah", "TKR menjalankan strategi Supit Urang dan mendesak pasukan Inggris mundur.", "Soedirman; Isdiman"],
+      ["23–24 Mar 1946", "Bandung Lautan Api", "Bandung, Jawa Barat", "Bandung Selatan dikosongkan dan fasilitas strategis dibumihanguskan.", "A.H. Nasution; Mohammad Toha; Moh. Ramdan"],
+      ["20 Nov 1946", "Puputan Margarana", "Desa Marga, Bali", "Pasukan Ciung Wanara bertempur habis-habisan melawan NICA.", "I Gusti Ngurah Rai"],
+      ["Des 1946–Feb 1947", "Operasi Westerling", "Sulawesi Selatan", "Operasi kekerasan pasukan DST menimbulkan korban besar di kalangan penduduk.", "Raymond Westerling; rakyat Sulawesi Selatan"],
+      ["1 Mar 1949", "Serangan Umum 1 Maret", "Yogyakarta", "TNI menguasai sebagian kota selama sekitar enam jam untuk menunjukkan Republik masih ada.", "Sri Sultan HB IX; Letkol Soeharto"]
+    ];
+    const questions = [
+      ["Kapan Pertempuran Surabaya yang diperingati sebagai Hari Pahlawan dimulai?", "10 November 1945", ["17 Agustus 1945", "10 November 1945", "23 Maret 1946", "1 Maret 1949"], "Pertempuran besar Surabaya dimulai pada 10 November 1945."],
+      ["Siapa yang mengobarkan semangat rakyat Surabaya melalui siaran radio?", "Bung Tomo", ["Jenderal Soedirman", "Bung Tomo", "I Gusti Ngurah Rai", "Achmad Tahir"], "Bung Tomo dikenal melalui pidato dan siaran radio yang membangkitkan semangat rakyat."],
+      ["Siapa gubernur Jawa Timur pada masa Pertempuran Surabaya?", "Gubernur Suryo", ["A.H. Nasution", "Gubernur Suryo", "Sri Sultan HB IX", "Mohammad Toha"], "Gubernur Suryo menyerukan perlawanan setelah ultimatum Sekutu."],
+      ["Strategi yang digunakan Soedirman dalam Palagan Ambarawa disebut ...", "Supit Urang", ["Benteng Stelsel", "Supit Urang", "Gerilya kota", "Bumi hangus"], "Supit Urang mengepung musuh dari dua sisi sehingga jalur komunikasi dan logistiknya terputus."],
+      ["Pertempuran Ambarawa berakhir dengan mundurnya pasukan Inggris pada ...", "15 Desember 1945", ["10 November 1945", "15 Desember 1945", "23 Maret 1946", "20 November 1946"], "Pada 15 Desember 1945 pasukan Inggris mundur dari Ambarawa menuju Semarang."],
+      ["Apa tujuan pembumihangusan Bandung Selatan?", "Agar fasilitas strategis tidak dimanfaatkan lawan", ["Membuat kota menjadi ibu kota", "Agar fasilitas strategis tidak dimanfaatkan lawan", "Menyambut pasukan Sekutu", "Menghentikan seluruh pengungsian"], "Pejuang membakar fasilitas strategis agar tidak dapat digunakan sebagai pangkalan oleh pasukan lawan."],
+      ["Siapa tokoh yang gugur dalam operasi peledakan gudang amunisi di Dayeuhkolot?", "Mohammad Toha dan Moh. Ramdan", ["Bung Tomo dan Sungkono", "Mohammad Toha dan Moh. Ramdan", "Soedirman dan Isdiman", "Ngurah Rai dan Westerling"], "Mohammad Toha dan Moh. Ramdan gugur dalam operasi di Dayeuhkolot."],
+      ["Insiden yang memicu bentrokan Medan Area pada 13 Oktober 1945 berkaitan dengan ...", "Lencana Merah Putih", ["Gudang amunisi", "Lencana Merah Putih", "Ultimatum enam jam", "Pendaratan di Sanur"], "Lencana Merah Putih seorang pemuda dirampas dan diinjak, memicu kemarahan pemuda."],
+      ["Siapa tokoh pemuda yang memelopori Barisan Pemuda Indonesia di Medan?", "Achmad Tahir", ["Achmad Tahir", "Bung Tomo", "A.H. Nasution", "Moh. Ramdan"], "Achmad Tahir dikenal sebagai tokoh pemuda yang memelopori Barisan Pemuda Indonesia."],
+      ["Apa arti istilah puputan dalam konteks Puputan Margarana?", "Berjuang sampai titik akhir/habis-habisan", ["Mundur teratur", "Perundingan damai", "Berjuang sampai titik akhir/habis-habisan", "Perayaan kemenangan"], "Puputan bermakna perlawanan habis-habisan atau sampai titik akhir."],
+      ["Siapa pemimpin pasukan Ciung Wanara dalam Puputan Margarana?", "I Gusti Ngurah Rai", ["I Gusti Ngurah Rai", "Soedirman", "Mallaby", "Westerling"], "I Gusti Ngurah Rai memimpin pasukan Ciung Wanara di Bali."],
+      ["Serangan Umum 1 Maret 1949 berlangsung efektif selama sekitar ...", "Enam jam", ["Satu jam", "Enam jam", "Dua hari", "Satu minggu"], "Pasukan Indonesia menguasai sebagian Yogyakarta sekitar pukul 06.00 sampai 12.00."],
+      ["Siapa komandan pelaksanaan Serangan Umum 1 Maret di Yogyakarta?", "Letkol Soeharto", ["Bung Tomo", "Letkol Soeharto", "Achmad Tahir", "Mayjen Sungkono"], "Letkol Soeharto memimpin pelaksanaan serangan di wilayah Yogyakarta."],
+      ["Siapa pemimpin pasukan khusus Belanda dalam operasi kekerasan di Sulawesi Selatan?", "Raymond Westerling", ["Raymond Westerling", "T.E.D. Kelly", "Mallaby", "Isdiman"], "Raymond Westerling memimpin Depot Speciale Troepen (DST) dalam operasi tersebut."],
+      ["Mengapa angka korban Peristiwa Westerling perlu dijelaskan secara hati-hati?", "Karena angka korban berbeda menurut sumber dan belum ada angka pasti yang disepakati", ["Karena tidak ada korban", "Karena semua sumber menyebut angka sama", "Karena angka korban berbeda menurut sumber dan belum ada angka pasti yang disepakati", "Karena peristiwa terjadi setelah 1950"], "Berbagai sumber menyebut angka yang berbeda; angka 40.000 terkenal dalam ingatan publik tetapi bukan angka pasti yang disepakati semua peneliti."]
+    ];
+    let seen = new Set(), activeQ = 0, score = 0, answered = false;
+    function markSeen(id) {seen.add(id); let p = Math.round(seen.size / 10 * 100); document.getElementById('progressText').textContent = p + '%'; document.getElementById('progressBar').style.width = p + '%'}
+    // Toggle detail secara independen untuk setiap kartu (fisik maupun diplomasi).
+    document.querySelectorAll('.toggle-detail,.dip-toggle').forEach((button, index) => {
+      button.setAttribute('type', 'button');
+      button.addEventListener('click', () => {
+        const card = button.closest('.event-card,.diplomacy-card');
+        const details = button.nextElementSibling;
+        if (!card || !details || !details.classList.contains('details') && !details.classList.contains('dip-details')) return;
+        const isOpen = details.classList.toggle('open');
+        const isDiplomacy = card.classList.contains('diplomacy-card');
+        button.textContent = isOpen ? (isDiplomacy ? 'Tutup materi −' : 'Tutup materi −') : (isDiplomacy ? 'Buka materi +' : 'Baca selengkapnya +');
+        button.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) markSeen((isDiplomacy ? 'diplomacy' : 'event') + index);
+        // Recalculate card height after the browser has rendered the expanded content.
+        requestAnimationFrame(() => layoutMasonry());
+      });
+    });
+
+    // Masonry row spans let the next card occupy the space beside a taller expanded card.
+    function layoutMasonry() {
+      document.querySelectorAll('.event-grid,.diplomacy-grid').forEach(grid => {
+        const styles = getComputedStyle(grid);
+        const row = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 8;
+        const gap = parseFloat(styles.rowGap) || 17;
+        grid.querySelectorAll(':scope > .event-card,:scope > .diplomacy-card').forEach(card => {
+          card.style.gridRowEnd = 'span 1';
+          const height = card.getBoundingClientRect().height;
+          const span = Math.max(1, Math.ceil((height + gap) / (row + gap)));
+          card.style.gridRowEnd = `span ${span}`;
+        });
+      });
+    }
+    const masonryObserver = new ResizeObserver(() => layoutMasonry());
+    document.querySelectorAll('.event-grid,.diplomacy-grid').forEach(grid => {
+      grid.querySelectorAll(':scope > .event-card,:scope > .diplomacy-card').forEach(card => masonryObserver.observe(card));
+    });
+    window.addEventListener('load', layoutMasonry);
+    window.addEventListener('resize', layoutMasonry);
+    window.addEventListener('resize', layoutW5);
+    setTimeout(layoutMasonry, 250);
+    document.getElementById('eventSearch').addEventListener('input', e => {let q = e.target.value.toLowerCase(); document.querySelectorAll('.event-card').forEach(c => c.style.display = c.dataset.search.includes(q) || c.innerText.toLowerCase().includes(q) ? '' : 'none')});
+    const sel = document.getElementById('w5Select'); w5Data.forEach((d, i) => {let o = document.createElement('option'); o.value = i; o.textContent = d.title; sel.append(o)});
+    const labels = [["WHAT", "Apa peristiwanya?", "W"], ["WHEN", "Kapan terjadi?", "T"], ["WHERE", "Di mana lokasinya?", "L"], ["WHO", "Siapa yang terlibat?", "S"], ["WHY", "Mengapa terjadi?", "? "], ["HOW", "Bagaimana jalannya?", "↗"]];
+    function layoutW5() {const grid = document.getElementById('w5Grid'); if (!grid) return; const styles = getComputedStyle(grid); const row = parseFloat(styles.getPropertyValue('grid-auto-rows')) || 8; const gap = parseFloat(styles.rowGap) || 12; grid.querySelectorAll(':scope > .w5').forEach(card => {card.style.gridRowEnd = 'span 1'; const height = card.getBoundingClientRect().height; const span = Math.max(1, Math.ceil((height + gap) / (row + gap))); card.style.gridRowEnd = `span ${span}`})}
+    const w5ResizeObserver = new ResizeObserver(() => layoutW5());
+    function renderW5() {let d = w5Data[+sel.value], vals = [d.what, d.date, d.place, d.who, d.why, d.how], grid = document.getElementById('w5Grid'); grid.innerHTML = labels.map((l, i) => `<article class="w5"><button type="button" aria-expanded="false"><span class="symbol">${l[2]}</span><span><strong>${l[0]}</strong><small>${l[1]}</small></span><span style="margin-left:auto">＋</span></button><div class="answer">${vals[i]}</div></article>`).join(''); grid.querySelectorAll(':scope > .w5').forEach(card => w5ResizeObserver.observe(card)); grid.querySelectorAll('.w5 button').forEach(b => b.addEventListener('click', () => {let card = b.parentElement; card.classList.toggle('open'); const opened = card.classList.contains('open'); b.setAttribute('aria-expanded', opened ? 'true' : 'false'); b.lastElementChild.textContent = opened ? '−' : '＋'; requestAnimationFrame(layoutW5)})); requestAnimationFrame(layoutW5); markSeen('5w')}
+    sel.addEventListener('change', renderW5); renderW5();
+    const tb = document.getElementById('timelineButtons'); timelineData.forEach((d, i) => {let b = document.createElement('button'); b.className = 'timepoint' + (i === 0 ? ' active' : ''); b.innerHTML = `<b>${d[0]}</b><span>${d[1]}</span>`; b.addEventListener('click', () => showTime(i)); tb.append(b)});
+    function showTime(i) {document.querySelectorAll('.timepoint').forEach((b, j) => b.classList.toggle('active', i === j)); let d = timelineData[i]; document.getElementById('timeDetail').innerHTML = `<div class="date">${d[0]}</div><h3>${d[1]}</h3><p><b>Lokasi:</b> ${d[2]}</p><p>${d[3]}</p><p><b>Tokoh penting:</b> ${d[4]}</p>`; markSeen('timeline')}
+    showTime(0);
+    function renderQ() {answered = false; let q = questions[activeQ]; document.getElementById('qCount').textContent = `PERTANYAAN ${activeQ + 1} DARI ${questions.length}`; document.getElementById('qScore').textContent = 'SKOR: ' + score; document.getElementById('quizProgress').style.width = (activeQ / questions.length * 100) + '%'; document.getElementById('question').textContent = q[0]; document.getElementById('feedback').style.display = 'none'; document.getElementById('nextQ').disabled = true; let a = document.getElementById('answers'); a.innerHTML = ''; q[2].forEach(opt => {let b = document.createElement('button'); b.className = 'answer-btn'; b.textContent = opt; b.addEventListener('click', () => choose(b, opt)); a.append(b)})}
+    function choose(btn, opt) {if (answered) return; answered = true; let q = questions[activeQ], correct = opt === q[1]; if (correct) score++; document.querySelectorAll('.answer-btn').forEach(b => {b.disabled = true; if (b.textContent === q[1]) b.classList.add('correct'); else if (b === btn) b.classList.add('wrong')}); let f = document.getElementById('feedback'); f.style.display = 'block'; f.innerHTML = `<b>${correct ? 'Benar!' : 'Belum tepat.'}</b> ${q[3]}${correct ? '' : ` Jawaban yang benar: <b>${q[1]}</b>.`}`; document.getElementById('qScore').textContent = 'SKOR: ' + score; document.getElementById('nextQ').disabled = false}
+    document.getElementById('nextQ').addEventListener('click', () => {if (activeQ < questions.length - 1) {activeQ++; renderQ()} else finishQuiz()});
+    function finishQuiz() {document.getElementById('quizContent').hidden = true; document.getElementById('quizResult').hidden = false; document.getElementById('quizProgress').style.width = '100%'; document.getElementById('finalScore').textContent = score + ' / ' + questions.length; let pct = score / questions.length; document.getElementById('resultTitle').textContent = pct >= .8 ? 'Hebat! Pemahamanmu sangat baik.' : pct >= .6 ? 'Bagus! Terus tingkatkan pemahamanmu.' : 'Tetap semangat belajar sejarah!'; document.getElementById('resultText').textContent = `Kamu menjawab benar ${score} dari ${questions.length} pertanyaan (${Math.round(pct * 100)}%). Baca kembali materi dan coba lagi untuk meningkatkan hasil.`; markSeen('quiz')}
+    function restart() {activeQ = 0; score = 0; document.getElementById('quizContent').hidden = false; document.getElementById('quizResult').hidden = true; renderQ()} document.getElementById('restart').addEventListener('click', restart); renderQ();
+    const menu = document.getElementById('menuBtn'), links = document.getElementById('navlinks'); menu.addEventListener('click', () => links.classList.toggle('show')); links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => links.classList.remove('show')));
+    const topBtn = document.getElementById('toTop'); window.addEventListener('scroll', () => {topBtn.style.display = window.scrollY > 500 ? 'block' : 'none'}); topBtn.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+    const observer = new IntersectionObserver(entries => entries.forEach(e => {if (e.isIntersecting) {e.target.classList.add('visible'); markSeen(e.target.id); observer.unobserve(e.target)} }), {threshold: .12}); document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
